@@ -1,4 +1,4 @@
-﻿student,gender,exercise,no_hats
+student,gender,exercise,no_hats
 1,male,less,14
 2,male,less,7
 3,female,less,14
@@ -8,3 +8,5 @@
 7,female,less,6
 8,female,less,1
 9,female,less,3
+10,male,less,2
+11,female,less,3

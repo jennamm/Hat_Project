@@ -1,0 +1,60 @@
+---
+title: "Data Collection Exercise Write-Up"
+author: "Jenna Moscaritolo"
+date: "Oct. 27, 2020"
+output: pdf_document
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(kableExtra)
+```
+
+
+## Introduction
+
+People are diverse in what type of clothing they own. For instance, some people do not care for fanny packs while others strive to incorporate fanny packs into their fashion or collect them. This is the same for hats. People wear hats for eye and face shade, to cover up a bad hair day, or for fashion.
+
+
+
+## Goal
+
+This project is to look at the correlation (if any) of the number of hats students own with binary factors of gender and exercise levels.
+
+
+
+## Data Collection
+
+I have recorded data from eleven Boston University (BU) undergraduate students who participate in the athletic bands at BU who are also in the honorary band service fraternity of Kappa Kappa Psi or sorority of Tau Beta Sigma. They were asked for their gender (binary), if they exercise three/more than three times a week or less than 3 times a week (binary), and the number of hats they each own.
+
+This information was collected by Google Forms in three questions:
+
+1. What is your gender?
+    * Female
+    * Male
+    * Other
+
+2. Do you exercise more or less than 3 times a week?
+    * More
+    * Less
+
+3. How many hats do you own?
+    * (Participants typed their numeric answer.)
+
+Here is a table of the data:
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+hat_data <- read.csv("hat_data.csv", header = TRUE)
+
+data_table <- kable(hat_data) %>% kable_paper("hover", full_width = FALSE)
+data_table
+```
+
+
+
+## Issues
+
+Here is an issue that was resolved before the experiment begun:
+
+* The second question only asks if the participants exercise more or less than 3 times a week but does not give them an option for 3 times a week. Because of this, the participants were prompted at this question to click the "More" answer if they exercise 3 time or more per week.
