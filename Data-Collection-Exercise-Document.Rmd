@@ -26,7 +26,7 @@ This project is to look at the correlation (if any) of the number of hats studen
 
 ## Data Collection
 
-I have recorded data from eleven Boston University (BU) undergraduate students who participate in the athletic bands at BU who are also in the honorary band service fraternity of Kappa Kappa Psi or sorority of Tau Beta Sigma. They were asked for their gender (binary), if they exercise three/more than three times a week or less than 3 times a week (binary), and the number of hats they each own.
+I have recorded data from 14 Boston University (BU) undergraduate students who participate in the athletic bands at BU who are also in the honorary band service fraternity of Kappa Kappa Psi or sorority of Tau Beta Sigma. They were asked for their gender (binary), if they exercise three/more than three times a week or less than three times a week (binary), and the number of hats they each own.
 
 This information was collected by Google Forms in three questions:
 
@@ -42,12 +42,18 @@ This information was collected by Google Forms in three questions:
 3. How many hats do you own?
     * (Participants typed their numeric answer.)
 
-Here is a table of the data:
+
+The next page has a table of the complete dataset.
+
+<P style="page-break-before: always">
+\newpage
+
+
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 hat_data <- read.csv("hat_data.csv", header = TRUE)
 
-data_table <- kable(hat_data) %>% kable_paper("hover", full_width = FALSE)
+data_table <- kable(hat_data, booktabs = TRUE, align=rep('c', 5), caption = "Complete Dataset") %>% kable_styling(position = "center")
 data_table
 ```
 
